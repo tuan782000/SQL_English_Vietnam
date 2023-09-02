@@ -17,3 +17,8 @@ For example, the Boot.dev database has a backup snapshot taken daily and we reta
 A "soft delete" is when you don't *actually* delete data from your database, but instead just "mark" the data as deleted. For example, you might set a `deleted_at` date on the row you want to delete. Then, in your queries you ignore anything that has a `deleted_at` date set. The idea is that this allows your application to behave as if it's deleting data, but you can always go back and restore any data that's been removed.
 
 You should probably only soft-delete if you have a specific reason to do so. Automated backups should be "good enough" for most applications that are just interested in protecting against developer mistakes.
+
+
+Tóm Lại việc sử dụng DELETE rất nguy hiểm, thay vì DELETE thì hãy dùng soft delete, việc này giúp ẩn dữ liệu đi thay vì xóa. Dữ liệu ẩn đi người dùng sẽ không còn thấy nó nữa nhưng dữ liệu đó ở trên DB vẫn còn nhưng chỉ bị ẩn đi.
+
+Người ta thường dùng trường `deleted_at` lưu lại ngày xóa, sau đó kèm theo các điều kiện query loại bỏ các truy vấn nếu có tồn tại `deleted_at`

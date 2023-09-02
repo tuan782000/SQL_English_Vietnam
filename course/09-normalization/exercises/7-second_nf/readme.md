@@ -46,3 +46,26 @@ Another developer on our team has created a joining table for the `companies`<->
 A *good* joining table simply has the ids of the entities in the relationship. It manages the *relationship* and nothing else. Any information about the entities themselves belongs on their respective tables.
 
 Move the column that's out of place to its proper table. Be sure to add it as the *last* column to the table you add it to.
+
+
+```SQL
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER NOT NULL
+);
+
+CREATE TABLE companies (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  num_employees INTEGER NOT NULL,
+  company_revenue INTEGER
+);
+
+CREATE TABLE users_companies (
+  user_id INTEGER,
+  company_id INTEGER,
+  UNIQUE(user_id, company_id)
+);
+```

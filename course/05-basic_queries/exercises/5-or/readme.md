@@ -26,3 +26,10 @@ The laws have changed again! Now we need to see how many affected users meet thi
 > Users who are from the United States or Canada, and are under 18
 
 Write a query that retrieves the *count* of every user that matches the conditions above.
+
+```SQL
+SELECT *
+FROM users
+WHERE (country_code IN ('CA') OR country_code IN ('US'))
+AND age < 18;
+```

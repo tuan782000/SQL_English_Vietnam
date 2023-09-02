@@ -4,6 +4,10 @@ When we need to filter the results of a `GROUP BY` query even further, we can us
 
 The `HAVING` clause is similar to the `WHERE` clause, but it operates on groups *after* they've been grouped, rather than rows *before* they've been grouped.
 
+Khi cần lọc thêm kết quả của truy vấn `GROUP BY`, chúng ta có thể sử dụng mệnh đề `HAVING`. Mệnh đề `HAVING` chỉ định điều kiện tìm kiếm cho một nhóm.
+
+Mệnh đề `HAVING` tương tự như mệnh đề `WHERE`, nhưng nó hoạt động trên các nhóm *sau* chúng được nhóm, thay vì các hàng *trước* chúng được nhóm.
+
 ```SQL
 SELECT album_id, count(id) as count
 FROM songs

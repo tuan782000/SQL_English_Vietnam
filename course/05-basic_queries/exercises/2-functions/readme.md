@@ -36,3 +36,10 @@ Some equality operators in SQL:
 * `=`: Equal to
 * `<`: Less than
 * `>`: Greater than
+
+DO IT
+```SQL
+SELECT *,
+IIF(was_successful = true, "No action required", "Perform an audit") AS audit
+FROM transactions;
+```

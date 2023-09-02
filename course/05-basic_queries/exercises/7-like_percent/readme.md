@@ -34,3 +34,8 @@ WHERE product_name LIKE '%banana%';
 Our HR team is dealing with a ticket from one of our users but they are having trouble pulling up their record in the database. They are pretty sure the user's name starts with `Al`.
 
 Write a query that returns all the fields for records where the user's `name` starts with `Al`.
+
+
+```SQL
+SELECT * FROM users WHERE name LIKE 'Al%'
+```

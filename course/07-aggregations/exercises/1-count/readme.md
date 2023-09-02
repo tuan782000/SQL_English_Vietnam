@@ -2,6 +2,8 @@
 
 An "aggregation" is a *single* value that's derived by combining *several* other values. We performed an aggregation earlier when we used the `count` statement to count the number of records in a table..
 
+"Tập hợp" là một giá trị *đơn* được tạo ra bằng cách kết hợp *một số* giá trị khác. Chúng ta đã thực hiện phép tổng hợp trước đó khi sử dụng câu lệnh `count` để đếm số lượng bản ghi trong một bảng..
+
 ## Why aggregations?
 
 Data stored in a database should generally be stored [raw](https://wagslane.dev/posts/keep-your-data-raw-at-rest/). When we need to calculate some additional data from the raw data, we can use an *aggregation*.
@@ -23,3 +25,13 @@ It's *much simpler* to store the products in a single place (we call this a [sin
 The front-end team is building a dashboard page in *CashPal*. We need to be able to provide them the number of successful transactions for a given user.
 
 Return the number of `transactions` where the `user_id` is `6`, and `was_successful` is `true`. 
+
+```SQL
+SELECT count(*) FROM transactions where user_id = 6 and was_successful = true;
+
+-- Viết xuống hàng
+
+SELECT count(*)
+FROM transactions
+WHERE user_id = 6 and was_successful = true;
+```

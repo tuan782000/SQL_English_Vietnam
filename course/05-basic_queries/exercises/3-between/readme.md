@@ -23,3 +23,9 @@ This query returns all the product names where the quantity was not between `20`
 We need to see how many young adults are using *CashPal*!
 
 Query our `users` table to find all the `name` and `age` fields of users `BETWEEN` the age of `18` and `30`.
+
+```SQL
+SELECT name, age 
+FROM users 
+WHERE age BETWEEN 18 AND 30;
+```

@@ -1,4 +1,4 @@
-# Logical Operators - AND
+# Logical Operators - AND - Toán tử logic and
 
 We often need to use *multiple* conditions to retrieve the exact information we want. We can begin to structure much more complex queries by using multiple conditions together to narrow down the search results of our query.
 
@@ -7,6 +7,7 @@ The logical `AND` operator can be used to narrow down our result sets even more!
 ## AND operator
 
 ```SQL
+-- in ra các trường product_name, quantity, shipment_status từ bảng products Điều kiện shipment_status = 'pending' và quantity BETWEEN 0 and 10;
 SELECT product_name, quantity, shipment_status
     FROM products
     WHERE shipment_status = 'pending'
@@ -30,3 +31,13 @@ All of the following operators are supported in SQL. The `=` is the main one to 
 The legal restrictions in Canada have changed! The way we have to handle Canadian minors' CashPal transactions is more strict. We need to find all of those users, so we can see how many users this change affects!
 
 Write a query that retrieves all of the fields from the `users` table who are from Canada (`CA`), and are under the age of `18`.
+
+```SQL
+
+SELECT *
+FROM users
+WHERE country_code IN ('CA')
+AND age < 18;
+```
+
+

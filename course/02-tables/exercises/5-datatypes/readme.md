@@ -8,10 +8,10 @@ SQLite only supports the most *basic* types, and we're using SQLite in this cour
 
 Let's go over the [data types supported by SQLite:](https://www.sqlite.org/datatype3.html) and how they are stored.
 
-1. `NULL` - Null value.
-2. `INTEGER` - A signed integer stored in 0,1,2,3,4,6, or 8 bytes.
+1. `NULL` - Null value. - Giá trị NULL
+2. `INTEGER` - A signed integer stored in 0,1,2,3,4,6, or 8 bytes. - Kiểu số nguyên
 3. `REAL` - Floating point value stored as an 64-bit [IEEE floating point number](https://en.wikipedia.org/wiki/IEEE_754).
-4. `TEXT` - Text string stored using database encoding such as [UTF-8](https://en.wikipedia.org/wiki/UTF-8)
+4. `TEXT` - Text string stored using database encoding such as [UTF-8](https://en.wikipedia.org/wiki/UTF-8) - Kiểu chuỗi là STRING trong SQL
 5. `BLOB` - Short for [Binary large object](https://en.wikipedia.org/wiki/Binary_large_object) and typically used for images, audio or other multimedia.
 
 ## Boolean values

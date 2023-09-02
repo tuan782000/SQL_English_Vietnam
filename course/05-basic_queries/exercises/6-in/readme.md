@@ -23,3 +23,9 @@ Hopefully, you're starting to see how querying specific data using fine-tuned SQ
 ## Assignment
 
 We want to know which of our users are from North America. Write a `SELECT` statement that returns the `name` `age` and `country_code` fields for every user within the `US`, `CA` or `MX`.
+
+```SQL
+SELECT name, age, country_code 
+from users 
+WHERE country_code IN ('US', 'CA', 'MX');
+``` 

@@ -22,3 +22,11 @@ Write a query that returns all rows and fields from the `transactions` table:
 
 * Any record where the `note` field has the word *lunch* in it.
 * The query should return at most `5` records.
+
+```SQL
+-- Lấy ra các note có từ lunch trong bảng transactions giới hạn 5 bản ghi không lấy nhiều
+SELECT * FROM transactions
+    WHERE note LIKE '%lunch%'
+    LIMIT 5;
+    
+```

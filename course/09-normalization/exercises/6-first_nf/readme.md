@@ -36,3 +36,11 @@ First normal form is simply *a good idea*. I've *never* built a database schema 
 We hired an intern at CashPal and her first task was to design a new "companies" table. This table will store our business client's data. Unfortunately, she has committed the unforgivable sin - there's no primary key on this table! We could have entire duplicate rows!
 
 Add an `id` field. It should be an integer and have a `PRIMARY KEY` constraint on it. When you're done, the `companies` table will be in first normal form.
+
+```SQL
+CREATE TABLE companies (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  num_employees INTEGER NOT NULL
+);
+```

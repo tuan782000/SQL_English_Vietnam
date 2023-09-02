@@ -50,3 +50,11 @@ Remove the `size` column from the `companies` table and alter the `SELECT` state
 ## Tip
 
 Remember the [IIF function](https://www.sqlitetutorial.net/sqlite-functions/sqlite-iif/) and the `AS` clause.
+
+```SQL
+CREATE TABLE companies (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  num_employees INTEGER NOT NULL
+);
+```

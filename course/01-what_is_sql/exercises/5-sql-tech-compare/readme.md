@@ -34,3 +34,16 @@ Let's take a look at how SQLite does *not* enforce type-checking. Notice that wi
 Notice how even though we defined `name` as a `TEXT` field, SQLite allowed us to use an integer! Like Python and JavaScript, SQLite has a loose type system... You can store any type of data in any field, regardless of how you defined it. *Remember: just because you can do something, doesn't mean you should!*
 
 To pass the assignment, submit the code in the altered state, where the record with `id` `2` has a `name` of `1`.
+
+```SQL
+-- Đầu tiên tạo bảng users có các trường id name age co kiểu dữ liệu lần lượt số - chữ - số
+CREATE TABLE users (id INTEGER, name TEXT, age INTEGER);
+-- Thêm dữ liệu
+INSERT into users (id, name, age) values (1, 'John Doe', 21);
+INSERT into users (id, name, age) values (2, 1, 33);
+-- Điểm khác biệt SQLite vs SQL khác là SQLite lỏng chuỗi và số, kiểu TEXT vẫn chấp nhận kiểu dữ liệu số trong SQLite
+
+-- Chọn tất cả users
+SELECT * from users;
+```
+

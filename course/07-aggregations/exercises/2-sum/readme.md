@@ -20,3 +20,15 @@ Which returns:
 We need to be able to calculate the current balance for a given user because we don't (yet) store the running balance on each individual transaction record. 
 
 Write a query that returns the `sum` aggregation of the `amount`s for all of Bob's transactions (`user_id` is `9`).
+
+```SQL
+-- Tính tổng amount với các user_id = 9;
+SELECT sum(amount) FROM transactions where user_id = 9
+
+-- Viết xuống hàng.
+SELECT sum(amount)
+FROM transactions
+WHERE user_id = 9;
+```
+
+

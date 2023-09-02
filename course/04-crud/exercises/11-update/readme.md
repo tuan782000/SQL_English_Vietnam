@@ -4,6 +4,10 @@ Whenever you update your profile picture or change your password online, you are
 
 ...Well, that's a bad example.
 
+Bất cứ khi nào bạn cập nhật ảnh hồ sơ hoặc thay đổi mật khẩu trực tuyến, bạn sẽ thay đổi dữ liệu trong một trường trên bảng trong cơ sở dữ liệu! Hãy tưởng tượng nếu mỗi lần bạn vô tình làm sai một dòng Tweet trên Twitter, bạn phải xóa toàn bộ dòng tweet đó và đăng một dòng tweet mới thay vì chỉ chỉnh sửa nó...
+
+...Chà, đó là một ví dụ tồi.
+
 ## Update statement
 
 The `UPDATE` statement in SQL allows us to update the fields of a record. We can even update many records depending on how we write the statement.
@@ -35,3 +39,13 @@ Here is the current state of the `USERS` table for reference!
 | 7   | Lance    | 20  | US           | LanChr    | b00tdevisbest      | 0        |
 | 8   | Tiffany  | 28  | US           | Tifferoon | autoincrement      | 1        |
 | 9   | Lane     | 27  | US           | wagslane  | update_me          | 0        |
+
+
+Cấp cho cô Lane quyền admin
+
+```SQL
+
+UPDATE users 
+SET is_admin = 1
+WHERE id = 9;
+```

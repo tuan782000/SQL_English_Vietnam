@@ -20,3 +20,9 @@ Use a `min` aggregation to find the `age` of our youngest *CashPal* user in the 
 ```
 
 * The `country_code` of the United States is `US`.
+
+```SQL
+select min(age)
+from users
+where country_code = 'US';
+```
